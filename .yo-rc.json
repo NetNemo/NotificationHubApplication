@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "gitCompany": "",
+    "baseName": "NotificationHub",
+    "packageName": "com.multidata.notification.hub",
+    "packageFolder": "com/multidata/notification/hub",
+    "serverPort": 8090,
+    "serviceDiscoveryType": false,
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "enableSwaggerCodegen": false,
+    "messageBroker": false,
+    "buildTool": "maven",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "enableTranslation": true,
+    "nativeLanguage": "it",
+    "languages": [
+      "en",
+      "it"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "5.4.2",
+    "jwtSecretKey": "MGVjYjhjZjVhNTE4ODgxYzNlZGRmNTgxN2QyNzM2NzRkODZjMjZjZDE5MzA1MGEzOTQ0NWE2YmZmYmQ3OWNkNTE4ZGZjZGZiNTVjYThiMGZhMmU1OWMyMDNjMmEyZjRjYzc3OTBmMDFiODg1ODQ5MWNkMGQ5OWRiNzVmNzE2NTc="
+  },
+  "git-provider": "GitHub",
+  "git-company": "NetNemo",
+  "repository-name": "NotificationHubApplication"
+}

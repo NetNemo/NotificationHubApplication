@@ -1,0 +1,16 @@
+version: '2'
+services:
+    notificationhub-app:
+        image: notificationhub
+        environment:
+            # - _JAVA_OPTIONS=-Xmx512m -Xms256m
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATA_MONGODB_URI=mongodb://notificationhub-mongodb:27017
+            - SPRING_DATA_MONGODB_DATABASE=NotificationHub
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8090:8090
+    notificationhub-mongodb:
+        extends:
+            file: mongodb.yml
+            service: notificationhub-mongodb
