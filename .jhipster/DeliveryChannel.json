@@ -1,0 +1,31 @@
+{
+    "name": "DeliveryChannel",
+    "fields": [
+        {
+            "fieldName": "type",
+            "fieldType": "Channel",
+            "fieldValues": "MAIL,SLACK"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "userChannelConfiguration",
+            "otherEntityName": "userChannelConfiguration",
+            "otherEntityRelationshipName": "deliveryChannel"
+        }
+    ],
+    "changelogDate": "20181016105001",
+    "entityTableName": "delivery_channel",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

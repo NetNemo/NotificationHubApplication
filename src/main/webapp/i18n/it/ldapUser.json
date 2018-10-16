@@ -1,0 +1,24 @@
+
+{
+    "notificationHubApp": {
+        "ldapUser" : {
+            "home": {
+                "title": "LdapUsers",
+                "createLabel": "Genera un nuovo Ldap User",
+                "createOrEditLabel": "Genera o modifica un Ldap User"
+            },
+            "created": "&Egrave; stato generato un nuovo Ldap User con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Ldap User identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Ldap User con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Ldap User {{ id }}?"
+            },
+            "detail": {
+                "title": "Ldap User"
+            },
+            "userID": "User ID",
+            "name": "Name",
+            "userChannelConfiguration": "User Channel Configuration"
+        }
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "name": "UserChannelConfiguration",
+    "fields": [
+        {
+            "fieldName": "mail",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "slackToken1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "slackToken2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "slackToken3",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "applicationEvent",
+            "otherEntityName": "applicationEvent",
+            "otherEntityRelationshipName": "userChannelConfiguration"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "systemEvent",
+            "otherEntityName": "systemEvent",
+            "otherEntityRelationshipName": "userChannelConfiguration"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "userID",
+            "otherEntityName": "ldapUser",
+            "otherEntityRelationshipName": "userChannelConfiguration"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "eventDeliveryStatus",
+            "otherEntityName": "eventDeliveryStatus",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "deliveryChannel",
+            "otherEntityName": "deliveryChannel",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181016105002",
+    "entityTableName": "user_channel_configuration",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

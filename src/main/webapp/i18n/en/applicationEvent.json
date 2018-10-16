@@ -1,0 +1,24 @@
+
+{
+    "notificationHubApp": {
+        "applicationEvent" : {
+            "home": {
+                "title": "Application Events",
+                "createLabel": "Create a new Application Event",
+                "createOrEditLabel": "Create or edit a Application Event"
+            },
+            "created": "A new Application Event is created with identifier {{ param }}",
+            "updated": "A Application Event is updated with identifier {{ param }}",
+            "deleted": "A Application Event is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Application Event {{ id }}?"
+            },
+            "detail": {
+                "title": "Application Event"
+            },
+            "description": "Description",
+            "event": "Event",
+            "userChannelConfiguration": "User Channel Configuration"
+        }
+    }
+}

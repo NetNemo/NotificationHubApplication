@@ -1,0 +1,24 @@
+
+{
+    "notificationHubApp": {
+        "systemEvent" : {
+            "home": {
+                "title": "SystemEvents",
+                "createLabel": "Genera un nuovo System Event",
+                "createOrEditLabel": "Genera o modifica un System Event"
+            },
+            "created": "&Egrave; stato generato un nuovo System Event con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato System Event identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato System Event con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare System Event {{ id }}?"
+            },
+            "detail": {
+                "title": "System Event"
+            },
+            "description": "Description",
+            "event": "Event",
+            "userChannelConfiguration": "User Channel Configuration"
+        }
+    }
+}

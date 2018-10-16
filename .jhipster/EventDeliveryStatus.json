@@ -1,0 +1,30 @@
+{
+    "name": "EventDeliveryStatus",
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "userChannelConfiguration",
+            "otherEntityName": "userChannelConfiguration",
+            "otherEntityRelationshipName": "eventDeliveryStatus"
+        }
+    ],
+    "changelogDate": "20181016104958",
+    "entityTableName": "event_delivery_status",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

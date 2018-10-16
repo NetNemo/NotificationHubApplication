@@ -7,6 +7,14 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entities",
+                "ldapUser": "Ldap User",
+                "event": "Event",
+                "eventAttach": "Event Attach",
+                "eventDeliveryStatus": "Event Delivery Status",
+                "systemEvent": "System Event",
+                "applicationEvent": "Application Event",
+                "deliveryChannel": "Delivery Channel",
+                "userChannelConfiguration": "User Channel Configuration",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

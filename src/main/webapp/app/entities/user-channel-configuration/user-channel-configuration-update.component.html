@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-user-channel-configuration-heading" jhiTranslate="notificationHubApp.userChannelConfiguration.home.createOrEditLabel">Create or edit a User Channel Configuration</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!userChannelConfiguration.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="userChannelConfiguration.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="notificationHubApp.userChannelConfiguration.mail" for="field_mail">Mail</label>
+                    <input type="text" class="form-control" name="mail" id="field_mail"
+                        [(ngModel)]="userChannelConfiguration.mail" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="notificationHubApp.userChannelConfiguration.slackToken1" for="field_slackToken1">Slack Token 1</label>
+                    <input type="text" class="form-control" name="slackToken1" id="field_slackToken1"
+                        [(ngModel)]="userChannelConfiguration.slackToken1" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="notificationHubApp.userChannelConfiguration.slackToken2" for="field_slackToken2">Slack Token 2</label>
+                    <input type="text" class="form-control" name="slackToken2" id="field_slackToken2"
+                        [(ngModel)]="userChannelConfiguration.slackToken2" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="notificationHubApp.userChannelConfiguration.slackToken3" for="field_slackToken3">Slack Token 3</label>
+                    <input type="text" class="form-control" name="slackToken3" id="field_slackToken3"
+                        [(ngModel)]="userChannelConfiguration.slackToken3" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="notificationHubApp.userChannelConfiguration.eventDeliveryStatus" for="field_eventDeliveryStatus">Event Delivery Status</label>
+                    <select class="form-control" id="field_eventDeliveryStatus" name="eventDeliveryStatus" [(ngModel)]="userChannelConfiguration.eventDeliveryStatusId" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="eventDeliveryStatusOption.id" *ngFor="let eventDeliveryStatusOption of eventdeliverystatuses; trackBy: trackEventDeliveryStatusById">{{eventDeliveryStatusOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="notificationHubApp.userChannelConfiguration.deliveryChannel" for="field_deliveryChannel">Delivery Channel</label>
+                    <select class="form-control" id="field_deliveryChannel" name="deliveryChannel" [(ngModel)]="userChannelConfiguration.deliveryChannelId" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="deliveryChannelOption.id" *ngFor="let deliveryChannelOption of deliverychannels; trackBy: trackDeliveryChannelById">{{deliveryChannelOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

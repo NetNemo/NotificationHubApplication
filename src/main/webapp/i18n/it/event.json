@@ -1,0 +1,26 @@
+
+{
+    "notificationHubApp": {
+        "event" : {
+            "home": {
+                "title": "Events",
+                "createLabel": "Genera un nuovo Event",
+                "createOrEditLabel": "Genera o modifica un Event"
+            },
+            "created": "&Egrave; stato generato un nuovo Event con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Event identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Event con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Event {{ id }}?"
+            },
+            "detail": {
+                "title": "Event"
+            },
+            "description": "Description",
+            "text": "Text",
+            "eventAttach": "Event Attach",
+            "systemEvent": "System Event",
+            "applicationEvent": "Application Event"
+        }
+    }
+}
