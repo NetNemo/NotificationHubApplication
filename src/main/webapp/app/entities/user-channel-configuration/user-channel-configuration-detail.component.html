@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="userChannelConfiguration">
+            <h2><span jhiTranslate="notificationHubApp.userChannelConfiguration.detail.title">User Channel Configuration</span> {{userChannelConfiguration.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="notificationHubApp.userChannelConfiguration.mail">Mail</span></dt>
+                <dd>
+                    <span>{{userChannelConfiguration.mail}}</span>
+                </dd>
+                <dt><span jhiTranslate="notificationHubApp.userChannelConfiguration.slackToken1">Slack Token 1</span></dt>
+                <dd>
+                    <span>{{userChannelConfiguration.slackToken1}}</span>
+                </dd>
+                <dt><span jhiTranslate="notificationHubApp.userChannelConfiguration.slackToken2">Slack Token 2</span></dt>
+                <dd>
+                    <span>{{userChannelConfiguration.slackToken2}}</span>
+                </dd>
+                <dt><span jhiTranslate="notificationHubApp.userChannelConfiguration.slackToken3">Slack Token 3</span></dt>
+                <dd>
+                    <span>{{userChannelConfiguration.slackToken3}}</span>
+                </dd>
+                <dt><span jhiTranslate="notificationHubApp.userChannelConfiguration.eventDeliveryStatus">Event Delivery Status</span></dt>
+                <dd>
+                    <div *ngIf="userChannelConfiguration.eventDeliveryStatusId">
+                        <a [routerLink]="['/event-delivery-status', userChannelConfiguration.eventDeliveryStatusId, 'view']">{{userChannelConfiguration.eventDeliveryStatusId}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="notificationHubApp.userChannelConfiguration.deliveryChannel">Delivery Channel</span></dt>
+                <dd>
+                    <div *ngIf="userChannelConfiguration.deliveryChannelId">
+                        <a [routerLink]="['/delivery-channel', userChannelConfiguration.deliveryChannelId, 'view']">{{userChannelConfiguration.deliveryChannelId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/user-channel-configuration', userChannelConfiguration.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

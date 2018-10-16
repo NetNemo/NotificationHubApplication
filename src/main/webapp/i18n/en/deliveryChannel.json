@@ -1,0 +1,24 @@
+
+{
+    "notificationHubApp": {
+        "deliveryChannel" : {
+            "home": {
+                "title": "Delivery Channels",
+                "createLabel": "Create a new Delivery Channel",
+                "createOrEditLabel": "Create or edit a Delivery Channel"
+            },
+            "created": "A new Delivery Channel is created with identifier {{ param }}",
+            "updated": "A Delivery Channel is updated with identifier {{ param }}",
+            "deleted": "A Delivery Channel is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Delivery Channel {{ id }}?"
+            },
+            "detail": {
+                "title": "Delivery Channel"
+            },
+            "type": "Type",
+            "description": "Description",
+            "userChannelConfiguration": "User Channel Configuration"
+        }
+    }
+}

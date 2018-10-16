@@ -1,0 +1,30 @@
+
+{
+    "notificationHubApp": {
+        "userChannelConfiguration" : {
+            "home": {
+                "title": "User Channel Configurations",
+                "createLabel": "Create a new User Channel Configuration",
+                "createOrEditLabel": "Create or edit a User Channel Configuration"
+            },
+            "created": "A new User Channel Configuration is created with identifier {{ param }}",
+            "updated": "A User Channel Configuration is updated with identifier {{ param }}",
+            "deleted": "A User Channel Configuration is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete User Channel Configuration {{ id }}?"
+            },
+            "detail": {
+                "title": "User Channel Configuration"
+            },
+            "mail": "Mail",
+            "slackToken1": "Slack Token 1",
+            "slackToken2": "Slack Token 2",
+            "slackToken3": "Slack Token 3",
+            "applicationEvent": "Application Event",
+            "systemEvent": "System Event",
+            "userID": "User ID",
+            "eventDeliveryStatus": "Event Delivery Status",
+            "deliveryChannel": "Delivery Channel"
+        }
+    }
+}

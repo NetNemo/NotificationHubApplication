@@ -1,0 +1,85 @@
+entity LdapUser {
+	userID String,
+    name String
+}
+
+entity Event {
+	id Long,
+    description String,
+    text String
+}
+
+entity EventAttach {
+	id Long,
+    file Blob
+}
+
+entity EventDeliveryStatus {
+    id Long,
+	date LocalDate,
+    status String
+}
+
+entity SystemEvent {
+	id Long,
+    description String
+}
+
+entity ApplicationEvent {
+	id Long,
+    description String
+}
+
+enum Channel {
+    MAIL, SLACK
+}
+
+entity DeliveryChannel {
+    id Long,
+	type Channel,
+	description String
+}
+
+entity UserChannelConfiguration {
+    id Long,
+	mail String,
+    slackToken1 String,
+    slackToken2 String,
+    slackToken3 String
+}
+
+
+
+//relationship OneToOne {
+//	Event to ApplicationEvent,
+//	Event to SystemEvent,
+//	ApplicationEvent to UserChannelConfiguration,
+//	SystemEvent to UserChannelConfiguration,
+//	UserChannelConfiguration to DeliveryChannel,
+//  UserChannelConfiguration to EventDeliveryStatus,
+//    EventDeliveryStatus to Event
+//}
+
+relationship OneToMany {
+	EventDeliveryStatus to UserChannelConfiguration,
+	Event to EventAttach,
+    SystemEvent to Event,
+    ApplicationEvent to Event,
+    DeliveryChannel to UserChannelConfiguration,
+    UserChannelConfiguration to ApplicationEvent,
+    UserChannelConfiguration to SystemEvent,
+    UserChannelConfiguration{userID} to LdapUser
+}
+
+// Set pagination options
+paginate all with infinite-scroll
+//paginate Job with pagination
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="ldapUser">
+            <h2><span jhiTranslate="notificationHubApp.ldapUser.detail.title">Ldap User</span> {{ldapUser.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="notificationHubApp.ldapUser.userID">User ID</span></dt>
+                <dd>
+                    <span>{{ldapUser.userID}}</span>
+                </dd>
+                <dt><span jhiTranslate="notificationHubApp.ldapUser.name">Name</span></dt>
+                <dd>
+                    <span>{{ldapUser.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="notificationHubApp.ldapUser.userChannelConfiguration">User Channel Configuration</span></dt>
+                <dd>
+                    <div *ngIf="ldapUser.userChannelConfigurationId">
+                        <a [routerLink]="['/user-channel-configuration', ldapUser.userChannelConfigurationId, 'view']">{{ldapUser.userChannelConfigurationId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/ldap-user', ldapUser.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

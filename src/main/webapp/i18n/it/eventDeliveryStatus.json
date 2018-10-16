@@ -1,0 +1,24 @@
+
+{
+    "notificationHubApp": {
+        "eventDeliveryStatus" : {
+            "home": {
+                "title": "EventDeliveryStatuses",
+                "createLabel": "Genera un nuovo Event Delivery Status",
+                "createOrEditLabel": "Genera o modifica un Event Delivery Status"
+            },
+            "created": "&Egrave; stato generato un nuovo Event Delivery Status con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Event Delivery Status identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Event Delivery Status con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Event Delivery Status {{ id }}?"
+            },
+            "detail": {
+                "title": "Event Delivery Status"
+            },
+            "date": "Date",
+            "status": "Status",
+            "userChannelConfiguration": "User Channel Configuration"
+        }
+    }
+}

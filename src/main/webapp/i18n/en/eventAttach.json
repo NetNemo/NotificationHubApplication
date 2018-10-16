@@ -1,0 +1,23 @@
+
+{
+    "notificationHubApp": {
+        "eventAttach" : {
+            "home": {
+                "title": "Event Attaches",
+                "createLabel": "Create a new Event Attach",
+                "createOrEditLabel": "Create or edit a Event Attach"
+            },
+            "created": "A new Event Attach is created with identifier {{ param }}",
+            "updated": "A Event Attach is updated with identifier {{ param }}",
+            "deleted": "A Event Attach is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Event Attach {{ id }}?"
+            },
+            "detail": {
+                "title": "Event Attach"
+            },
+            "file": "File",
+            "event": "Event"
+        }
+    }
+}

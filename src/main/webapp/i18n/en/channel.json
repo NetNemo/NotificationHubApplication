@@ -1,0 +1,9 @@
+{
+    "notificationHubApp": {
+        "Channel" : {
+            "null": "",
+            "MAIL": "MAIL",
+            "SLACK": "SLACK"
+        }
+    }
+}

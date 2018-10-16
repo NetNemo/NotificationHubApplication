@@ -1,0 +1,32 @@
+{
+    "name": "ApplicationEvent",
+    "fields": [
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "event",
+            "otherEntityName": "event",
+            "otherEntityRelationshipName": "applicationEvent"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "userChannelConfiguration",
+            "otherEntityName": "userChannelConfiguration",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181016105000",
+    "entityTableName": "application_event",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

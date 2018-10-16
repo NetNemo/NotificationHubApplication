@@ -1,0 +1,42 @@
+{
+    "name": "Event",
+    "fields": [
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "text",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "eventAttach",
+            "otherEntityName": "eventAttach",
+            "otherEntityRelationshipName": "event"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "systemEvent",
+            "otherEntityName": "systemEvent",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "applicationEvent",
+            "otherEntityName": "applicationEvent",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181016104956",
+    "entityTableName": "event",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

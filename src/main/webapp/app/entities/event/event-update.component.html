@@ -1,0 +1,48 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-event-heading" jhiTranslate="notificationHubApp.event.home.createOrEditLabel">Create or edit a Event</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!event.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="event.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="notificationHubApp.event.description" for="field_description">Description</label>
+                    <input type="text" class="form-control" name="description" id="field_description"
+                        [(ngModel)]="event.description" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="notificationHubApp.event.text" for="field_text">Text</label>
+                    <input type="text" class="form-control" name="text" id="field_text"
+                        [(ngModel)]="event.text" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="notificationHubApp.event.systemEvent" for="field_systemEvent">System Event</label>
+                    <select class="form-control" id="field_systemEvent" name="systemEvent" [(ngModel)]="event.systemEventId" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="systemEventOption.id" *ngFor="let systemEventOption of systemevents; trackBy: trackSystemEventById">{{systemEventOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="notificationHubApp.event.applicationEvent" for="field_applicationEvent">Application Event</label>
+                    <select class="form-control" id="field_applicationEvent" name="applicationEvent" [(ngModel)]="event.applicationEventId" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="applicationEventOption.id" *ngFor="let applicationEventOption of applicationevents; trackBy: trackApplicationEventById">{{applicationEventOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

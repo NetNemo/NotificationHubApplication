@@ -1,0 +1,36 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="eventAttach">
+            <h2><span jhiTranslate="notificationHubApp.eventAttach.detail.title">Event Attach</span> {{eventAttach.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="notificationHubApp.eventAttach.file">File</span></dt>
+                <dd>
+                    <div *ngIf="eventAttach.file">
+                        <a (click)="openFile(eventAttach.fileContentType, eventAttach.file)" jhiTranslate="entity.action.open">open</a>
+                        {{eventAttach.fileContentType}}, {{byteSize(eventAttach.file)}}
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="notificationHubApp.eventAttach.event">Event</span></dt>
+                <dd>
+                    <div *ngIf="eventAttach.eventId">
+                        <a [routerLink]="['/event', eventAttach.eventId, 'view']">{{eventAttach.eventId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/event-attach', eventAttach.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
